@@ -1,21 +1,14 @@
 import React from "react";
 import Button from "./Button";
 
-// const list=["All","Live","Gaming","News","Movies","Travelling","Dancing","Singing","Comedy","Stories"];
+const lists=["All","Live","Gaming","News","Movies","Travelling","Dancing","Singing","Comedy","Stories","Tech"];
 
-const Buttonlist = (list) => {
+const Buttonlist = () => {
   return (
     <div className="flex">
-      <Button name="All"/>
-      <Button name="Live"/>
-      <Button name="Gaming"/>
-      <Button name="News"/>
-      <Button name="Movies"/>
-      <Button name="Travelling"/>
-      <Button name="Dancing"/>
-      <Button name="Singing"/>
-      <Button name="Comedy"/>
-      
+      {lists.map((item, index) => (
+        <Button key={index} name={item} />
+      ))}
     </div>
   );
 };
